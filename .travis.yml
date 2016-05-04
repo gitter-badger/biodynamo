@@ -1,7 +1,15 @@
-language: java
-jdk:
-  - oraclejdk8
-
-branches:
-  only:
-    - master
+language: cpp
+addons:
+  apt:
+    # List of whitelisted in travis packages for ubuntu-precise can be found here:
+    #   https://github.com/travis-ci/apt-package-whitelist/blob/master/ubuntu-precise
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-5
+    - g++-5
+os:
+  - linux
+compiler:
+  - gcc
+script: mkdir build && cd build && cmake .. && make && ./runBiodynamoTests
