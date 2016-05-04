@@ -53,7 +53,7 @@ elseif(UNIX)
   set(LIBGMP_DEST "${CMAKE_BINARY_DIR}/libgmp${CMAKE_SHARED_LIBRARY_SUFFIX}.10")
 endif()
 add_custom_target(copylibgmp DEPENDS libgmp COMMAND ${CMAKE_COMMAND} -E copy_if_different
-    "${CMAKE_BINARY_DIR}/gmp/src/gmp/.libs/libgmp.so" ${LIBGMP_DEST})
+    "${CMAKE_BINARY_DIR}/gmp/src/gmp/.libs/libgmp${CMAKE_SHARED_LIBRARY_SUFFIX}" ${LIBGMP_DEST})
 
 #--------------------- Doxygen ---------------------------------
 add_subdirectory(doc doc)
