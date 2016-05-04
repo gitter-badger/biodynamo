@@ -37,5 +37,5 @@ compiler:
 script:
   - mkdir build
   - cd build
-  - cmake .. -Dtest=OFF && make
+  - cmake .. && make
   - ./runBiodynamoTests

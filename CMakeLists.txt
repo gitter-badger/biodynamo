@@ -113,7 +113,7 @@ if (test)
   # create test executable
   file(GLOB TEST_SOURCES "test/*.cc" "test/*.h")
   set(TEST_TARGET runBiodynamoTests)
-  add_executable(${TEST_TARGET} "${TEST_SOURCES}")
+  add_executable(${TEST_TARGET} ${TEST_SOURCES})
   target_link_libraries(${TEST_TARGET} libgtest)
   target_link_libraries(${TEST_TARGET} libjsoncpp)
   target_link_libraries(${TEST_TARGET} biodynamo)
