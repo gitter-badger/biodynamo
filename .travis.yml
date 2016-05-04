@@ -19,6 +19,7 @@ addons:
     - doxygen
 os:
   - linux
+  - osx
 compiler:
   - gcc
 script:
