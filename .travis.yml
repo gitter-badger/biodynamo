@@ -3,7 +3,10 @@ sudo: required
 dist: trusty
 install:
   # link to newest compiler
-  - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
+#  - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
+  - echo ${CXX}
+  - ${CXX} --version
+  - ${CXX} -v
 addons:
   apt:
     # List of whitelisted in travis packages for ubuntu-precise can be found here:
@@ -18,7 +21,7 @@ addons:
     - cmake-data
     - doxygen
 os:
-  - linux
+#  - linux
   - osx
 compiler:
   - gcc
