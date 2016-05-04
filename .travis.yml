@@ -5,7 +5,7 @@ install:
   - echo ${TRAVIS_OS_NAME}
   - brew update
   - brew outdated gcc || brew upgrade gcc
-  - brew outdated g++ || brew upgrade g++
+#  - brew outdated g++ || brew upgrade g++
   - brew install doxygen
   # link to newest compiler
 #  - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
