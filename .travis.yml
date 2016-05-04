@@ -1,6 +1,9 @@
 language: cpp
 sudo: required
 dist: trusty
+install:
+  # link to newest compiler
+  - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
 addons:
   apt:
     # List of whitelisted in travis packages for ubuntu-precise can be found here:
