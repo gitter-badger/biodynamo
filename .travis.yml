@@ -11,8 +11,13 @@ addons:
     - g++-5
     - cmake
     - cmake-data
+    - doxygen
 os:
   - linux
 compiler:
   - gcc
-script: mkdir build && cd build && cmake .. && make && ./runBiodynamoTests
+script:
+  - mkdir build
+  - cd build
+  - cmake .. && make
+  - ./runBiodynamoTests
