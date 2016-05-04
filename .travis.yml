@@ -10,6 +10,9 @@ install:
   # link to newest compiler
 #  - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
   - ls -l /usr/local/Cellar/gcc/5.3.0
+  - ls -l /usr/local/Cellar/gcc/5.3.0/bin
+  - ls -l
+  - ls -l /Users/travis/build/BioDynaMo/biodynamo/test/
   - echo ${CXX}
   - ${CXX} --version
   - ${CXX} -v
