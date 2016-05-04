@@ -2,12 +2,11 @@ language: cpp
 sudo: required
 #dist: trusty
 install:
-  - echo ${TRAVIS_OS_NAME} || true
+  - echo ${TRAVIS_OS_NAME}
   - brew update
-  - brew outdated gcc || brew upgrade gcc || true
-  - brew install gcc-5 || true
-  - brew install g++-5 || true
-  - then brew install doxygen || true
+  - brew outdated gcc || brew upgrade gcc
+  - brew outdated g++ || brew upgrade g++
+  - brew install doxygen
   # link to newest compiler
 #  - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
   - echo ${CXX}
