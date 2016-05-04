@@ -1,6 +1,12 @@
 language: cpp
 sudo: required
 dist: trusty
+before-install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew outdated gcc || brew upgrade gcc; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install gcc-5; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install g++-5; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install doxygen; fi
 install:
   # link to newest compiler
 #  - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
