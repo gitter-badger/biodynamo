@@ -52,11 +52,11 @@ Rational::Rational(double value)
   }
 
   if (sign != 0) {
-    numerator_ -= mantisse;
+    numerator_ -= static_cast<unsigned long int>(mantisse);
   } else {
-    numerator_ += mantisse;
+    numerator_ += static_cast<unsigned long int>(mantisse);;
   }
-  denominator_ += denom;
+  denominator_ += static_cast<unsigned long int>(denom);;
 
   if (ex > 0) {
     numerator_ = numerator_ * pow2(static_cast<int>(ex));
